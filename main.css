@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+button, input[type="text"] {
+  padding: 5px;
+}
+
+div {
+  margin: 30px auto;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.quiz-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+div.safety-intro {
+  font-size: 22px;
+  max-width: 600px;
+  margin: 20 auto;
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+div.question-div {
+  max-width: 600px;
+  margin: 20 auto;
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+div.answer-feedback {
+  display: inline-block;
+  margin: 12px;
+  width: 100%;
+}
+
+div.right-wrong {
+  margin: 0px;
+  border: 0px;
+  padding: 5px;
+  width: 40%;
+}
+
+div.score {
+  margin: 0px;
+  border: 0px;
+  padding: 5px;
+  width: 40%;
+}
+
+div.proceed {
+  width: 40%;
+  float: right;
+}
+
+
+/*
+
+# I thought there might be something useful in this lot below...
+
+.shopping-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.shopping-list > li {
+  margin-bottom: 20px;
+  border: 1px solid grey;
+  padding: 20px;
+}
+
+.shopping-item {
+  display: block;
+  color: grey;
+  font-style: italic;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.shopping-item-checked {
+  text-decoration: line-through;
+}
+
+*/
