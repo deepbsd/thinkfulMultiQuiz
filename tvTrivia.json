@@ -1,176 +1,176 @@
 [
 	{ 
-	  "id": 1,
-	  "question": "Who was Arnold Ziffle?",
-	  "options": [
-		  {"text": "A.  Perry Mason's first client."},
-		  {"text": "B.  A crewman on McHale's Navy."},
-		  {"text": "C.  A pet pig on Green Acres.", "correct": true},
-		  {"text": "D.  The Sherriff on The Virginian."},
-		  {"text": "E.  Jethro's 2nd Cousin on The Bervely Hillbillies."},
+	  id: 1,
+	  question: "Who was Arnold Ziffle?",
+	  options: [
+		  {text: "A.  Perry Mason's first client."},
+		  {text: "B.  A crewman on McHale's Navy."},
+		  {text: 'C.  A pet pig on Green Acres.', correct: true},
+		  {text: "D.  The Sherriff on The Virginian."},
+		  {text: "E.  Jethro's 2nd Cousin on The Bervely Hillbillies."},
 	   ]
 	},
 
 	{ 
-		"id": 2,
-		"question": "How did Dr. Loveless's family lose their land grant in California?",
-		"options": [
-			{"text": "A.  When Dr. Loveless was declared insane."},
-			{"text": "B.  When Jim and Arte arrested him."},
-			{"text": "C.  When The Wild Wild West got cancelled."},
-			{"text": "D.  When Dr. Loveless tried to blow up California."},
-			{"text": "E.  When California became a state.", "correct": true},
+		id: 2,
+		question: "How did Dr. Loveless's family lose their land grant in California?",
+		options: [
+			{text: "A.  When Dr. Loveless was declared insane."},
+			{text: "B.  When Jim and Arte arrested him."},
+			{text: "C.  When The Wild Wild West got cancelled."},
+			{text: "D.  When Dr. Loveless tried to blow up California."},
+			{text: "E.  When California became a state.", correct: true},
 		]
 	},
 
 	{ 
-		"id": 3,
-		"question": "How many seasons did Bonanza have?",
-		"options": [
-			{"text": "A.  14.", "correct": true},
-			{"text": "B.  11."},
-			{"text": "C.  18."},
-			{"text": "D.  6."},
-			{"text": "E.  10."},
+		id: 3,
+		question: "How many seasons did Bonanza have?",
+		options: [
+			{text: "A.  14.", correct: true},
+			{text: "B.  11."},
+			{text: "C.  18."},
+			{text: "D.  6."},
+			{text: "E.  10."},
 		]
 	},
 
 	{ 
-		"id": 4,
-		"question": "On Honey West, what kind of pet was Bruce?",
-		"options": [
-			{"text": "A.  Parrot."},
-			{"text": "B.  Chimpanzee."},
-			{"text": "C.  Great Dane."},
-			{"text": "D.  Ocelot.", "correct": true},
-			{"text": "E.  Cobra."},
+		id: 4,
+		question: "On Honey West, what kind of pet was Bruce?",
+		options: [
+			{text: "A.  Parrot."},
+			{text: "B.  Chimpanzee."},
+			{text: "C.  Great Dane."},
+			{text: "D.  Ocelot.", correct: true},
+			{text: "E.  Cobra."},
 		]
 	},
 
 	{ 
-		"id": 5,
-		"question": "What actor played 'The Beaver'?",
-		"options": [
-			{"text": "A.  Tony Dow."},
-			{"text": "B.  Jerry Mathers.", "correct": true},
-			{"text": "C.  Hugh Beaumont."},
-			{"text": "D.  Ken Osmond."},
-			{"text": "E.  Larry Mondello."},
+		id: 5,
+		question: "What actor played 'The Beaver'?",
+		options: [
+			{text: "A.  Tony Dow."},
+			{text: "B.  Jerry Mathers.", correct: true},
+			{text: "C.  Hugh Beaumont."},
+			{text: "D.  Ken Osmond."},
+			{text: "E.  Larry Mondello."},
 		]
 	},
 
 	{ 
-		"id": 6,
-		"question": "What town was Gomer Pyle from?",
-		"options": [
-			{"text": "A.  Macon, Georgia."},
-			{"text": "B.  Limestone, Tennessee."},
-			{"text": "C.  Mayberry, North Carolina.", "correct": true},
-			{"text": "D.  Bluebell, Alabama."},
-			{"text": "E.  Mount Airy, North Carolina."},
+		id: 6,
+		question: "What town was Gomer Pyle from?",
+		options: [
+			{text: "A.  Macon, Georgia."},
+			{text: "B.  Limestone, Tennessee."},
+			{text: "C.  Mayberry, North Carolina.", correct: true},
+			{text: "D.  Bluebell, Alabama."},
+			{text: "E.  Mount Airy, North Carolina."},
 			]
 	},
 
 	{ 
-		"id": 7,
-		"question": "On Route 66, what kind of car did Tod and Buz drive around the country in?",
-		"options": [
-			{"text": "A.  Chevrolet Corvette.", "correct": true},
-			{"text": "B.  VW 'Love Bus.'"},
-			{"text": "C.  They both had motorcycles."},
-			{"text": "D.  Lincoln Continentle."},
-			{"text": "E.  Stutz Bearcat."},
+		id: 7,
+		question: "On Route 66, what kind of car did Tod and Buz drive around the country in?",
+		options: [
+			{text: "A.  Chevrolet Corvette.", correct: true},
+			{text: "B.  VW 'Love Bus.'"},
+			{text: "C.  They both had motorcycles."},
+			{text: "D.  Lincoln Continentle."},
+			{text: 'E.  Stutz Bearcat.'},
 		]
 	},
 
 	{ 
-		"id": 8,
-		"question": "What was Robert Ironside's middle initial?",
-		"options": [
-			{"text": "A.  D."},
-			{"text": "B.  T.", "correct": true},
-			{"text": "C.  E."},
-			{"text": "D.  C."},
-			{"text": "E.  P."},
+		id: 8,
+		question: "What was Robert Ironside's middle initial?",
+		options: [
+			{text: "A.  D."},
+			{text: "B.  T.", correct: true},
+			{text: "C.  E."},
+			{text: "D.  C."},
+			{text: "E.  P."},
 		]
 	},
 
 	{ 
-		"id": 9,
-		"question": "What was Jonny Quest's dog's name?",
-		"options": [
-			{"text": "A.  Bandit.", "correct": true},
-			{"text": "B.  Paddle foot."},
-			{"text": "C.  Clutch."},
-			{"text": "D.  Trigger."},
-			{"text": "E.  Lassie."},
+		id: 9,
+		question: "What was Jonny Quest's dog's name?",
+		options: [
+			{text: "A.  Bandit.", correct: true},
+			{text: "B.  Paddle foot."},
+			{text: "C.  Clutch."},
+			{text: "D.  Trigger."},
+			{text: "E.  Lassie."},
 		]
 	},
 
 	{ 
-		"id": 10,
-		"question": "What TV show first invented the Re-run?",
-		"options": [
-			{"text": "A.  Alfred Hitchcock Presents."},
-			{"text": "B.  You Asked For It."},
-			{"text": "C.  The Fugitive."},
-			{"text": "D.  Star Trek."},
-			{"text": "E.  I Love Lucy.", "correct": true},
+		id: 10,
+		question: "What TV show first invented the Re-run?",
+		options: [
+			{text: "A.  Alfred Hitchcock Presents."},
+			{text: "B.  You Asked For It."},
+			{text: "C.  The Fugitive."},
+			{text: "D.  Star Trek."},
+			{text: "E.  I Love Lucy.", correct: true},
 		]
 	},
 	{ 
-		"id": 11,
-		"question": "Illya Kuryakin would say Open Channel _?",
-		"options": [
-			{"text": "A.  B."},
-			{"text": "B.  D.", "correct": true},
-			{"text": "C.  O."},
-			{"text": "D.  U."},
-			{"text": "E.  Q."},
+		id: 11,
+		question: "Illya Kuryakin would say Open Channel _?",
+		options: [
+			{text: "A.  B."},
+			{text: "B.  D.", correct: true},
+			{text: "C.  O."},
+			{text: "D.  U."},
+			{text: "E.  Q."},
 		]
 	},
 	{ 
-		"id": 12,
-		"question": "Where does Paladin live in San Francisco?",
-		"options": [
-			{"text": "A.  Carlton Hotel.", "correct": true},
-			{"text": "B.  The Fairmont."},
-			{"text": "C.  His ranch."},
-			{"text": "D.  He lives with family there."},
-			{"text": "E.  The Montedorro Hotel."},
+		id: 12,
+		question: "Where does Paladin live in San Francisco?",
+		options: [
+			{text: "A.  Carlton Hotel.", correct: true},
+			{text: "B.  The Fairmont."},
+			{text: "C.  His ranch."},
+			{text: "D.  He lives with family there."},
+			{text: "E.  The Montedorro Hotel."},
 		]
 	},
 	{ 
-		"id": 13,
-		"question": "What was the name of the space ship on Lost in Space?",
-		"options": [
-			{"text": "A.  Alpha Centauri."},
-			{"text": "B.  The Galileo."},
-			{"text": "C.  Jupiter 2.", "correct": true},
-			{"text": "D.  The Astral Traveler."},
-			{"text": "E.  Zachary's Zoo."},
+		id: 13,
+		question: "What was the name of the space ship on Lost in Space?",
+		options: [
+			{text: "A.  Alpha Centauri."},
+			{text: "B.  The Galileo."},
+			{text: "C.  Jupiter 2.", correct: true},
+			{text: "D.  The Astral Traveler."},
+			{text: "E.  Zachary's Zoo."},
 		]
 	},
 							{ 
-		"id": 14,
-		"question": "Who was prettier? Ginger or Mary Ann?",
-		"options": [
-			{"text": "A.  Mary Ann.", "correct": true},
-			{"text": "B.  The Girl from UNCLE.", "correct": true},
-			{"text": "C.  Yeoman Rand.", "correct": true},
-			{"text": "D.  Laura Petrie.", "correct": true},
-			{"text": "E.  Ginger.", "correct": true},
+		id: 14,
+		question: "Who was prettier? Ginger or Mary Ann?",
+		options: [
+			{text: "A.  Mary Ann.", correct: true},
+			{text: "B.  The Girl from UNCLE.", correct: true},
+			{text: "C.  Yeoman Rand.", correct: true},
+			{text: "D.  Laura Petrie.", correct: true},
+			{text: "E.  Ginger.", correct: true},
 		]
 	},
 	{ 
-		"id": 15,
-		"question": "What would The Chief say about the 'Cone of Silence'?",
-		"options": [
-			{"text": "A.  Open a hailing frequency."},
-			{"text": "B.  Check with Agent Larabee."},
-			{"text": "C.  The Claw stole it."},
-			{"text": "D.  No, Max.", "correct": true},
-			{"text": "E.  Your shoe is ringing."},
+		id: 15,
+		question: 'What would The Chief say about the "Cone of Silence"?',
+		options: [
+			{text: "A.  Open a hailing frequency."},
+			{text: "B.  Check with Agent Larabee."},
+			{text: "C.  The Claw stole it."},
+			{text: "D.  No, Max.", correct: true},
+			{text: "E.  Your shoe is ringing."},
 		]
 	}
-]		
+]			

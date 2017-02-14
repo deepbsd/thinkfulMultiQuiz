@@ -35,7 +35,7 @@
 	   	.done( function(data){
 	   		state.questions = data;
 	   		//console.log('object: '+data);
-	   		console.log('state.questions: '+state.questions);
+	   		console.log('state.questions: '+state.questions.length);
 	   		callback
 	   	})
 	   	.fail( function() {
