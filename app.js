@@ -29,7 +29,7 @@
 		    type: "GET",
 		    url: choice.url,
 		    async: true,
-		    dataType: 'text'
+		    dataType: 'json'
 	   	}
 	   	$.ajax(settings)
 	   	.done( function(data){
