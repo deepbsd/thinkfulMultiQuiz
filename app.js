@@ -16,7 +16,7 @@
 	}  // end of state object
 
 	var tvTriviaQuiz = {
-		url: "tvTrivia.txt"  // the file should be in the current directory
+		url: "tvTrivia.json"  // the file should be in the current directory
 	}
 
 	var firearmSafetyQuiz = {
@@ -28,7 +28,7 @@
 		var settings = {
 		    type: "GET",
 		    url: choice.url,
-		    async: true,
+		    async: false,
 		    dataType: 'json',
 		    success: callback
 	   	}
@@ -102,9 +102,9 @@
 		$('#js-quizzapp-start-form').submit( function(ev) {
 			ev.preventDefault();
 			console.log('start pressed');
-			console.log('object: '+state.questions);
 			state.currentPage = 'question';
 			getQuestionsData(tvTriviaQuiz, insertQuizData);
+			console.log('object: '+state.questions);			
 			proceedQuiz();
 		});
 	}
