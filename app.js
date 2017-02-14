@@ -12,11 +12,11 @@
 			right: [],
 			wrong: []
 		},
-		// this would be where state.questions[] 
+		// this would be where state.questions[] would normally be
 	}  // end of state object
 
 	var tvTriviaQuiz = {
-		url: "tvTrivia.json"  // the file should be in the current directory
+		url: "tvTrivia.txt"  // the file should be in the current directory
 	}
 
 	var firearmSafetyQuiz = {
@@ -28,14 +28,22 @@
 		var settings = {
 		    type: "GET",
 		    url: choice.url,
-		    async: false,
-		    dataType: 'json',
-		    success: callback
+		    async: true,
+		    dataType: 'text'
 	   	}
-	   	$.ajax(settings);
+	   	$.ajax(settings)
+	   	.done( function(data){
+	   		state.questions = data;
+	   		//console.log('object: '+data);
+	   		console.log('state.questions: '+state.questions);
+	   		callback
+	   	})
+	   	.fail( function() {
+	   		console.log('Fail!');
+	   	});
 	};
 
-
+	// This is the callback for getQuestionsData() invoked from renderIntro()
 	function insertQuizData(questionData) {
 		console.log('hitting insertQuizData...')
 		try {
@@ -103,9 +111,12 @@
 			ev.preventDefault();
 			console.log('start pressed');
 			state.currentPage = 'question';
-			getQuestionsData(tvTriviaQuiz, insertQuizData);
-			console.log('object: '+state.questions);			
-			proceedQuiz();
+			getQuestionsData(tvTriviaQuiz, proceedQuiz);
+
+
+
+			//console.log('object: '+state.questions);			
+			//proceedQuiz();
 		});
 	}
 
