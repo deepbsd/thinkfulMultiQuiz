@@ -16,19 +16,20 @@
 	}  // end of state object
 
 	var tvTriviaQuiz = {
-		url: "tvTrivia.txt"
+		url: "tvTrivia.txt"  // the file should be in the current directory
 	}
 
 	var firearmSafetyQuiz = {
-		url: "firearmsQuestions.txt"
+		url: "firearmsQuestions.txt"   // file should be in the current directory
 	}
 
+	// this function gets called by renderIntro() in the 'startQuiz' event listener
 	function getQuestionsData(choice, callback) {
 		var settings = {
 		    type: "GET",
 		    url: choice.url,
 		    async: true,
-		    dataType: 'text',
+		    dataType: 'json',
 		    success: callback
 	   	}
 	   	$.ajax(settings);
@@ -36,8 +37,14 @@
 
 
 	function insertQuizData(questionData) {
-		state.questions = questionData;
-	}
+		console.log('hitting insertQuizData...')
+		try {
+			state.questions = questionData;	
+		}
+		catch (e) {
+			console.log('error: '+e);
+		}
+	};
 
 
 
@@ -95,6 +102,7 @@
 		$('#js-quizzapp-start-form').submit( function(ev) {
 			ev.preventDefault();
 			console.log('start pressed');
+			console.log('object: '+state.questions);
 			state.currentPage = 'question';
 			getQuestionsData(tvTriviaQuiz, insertQuizData);
 			proceedQuiz();
