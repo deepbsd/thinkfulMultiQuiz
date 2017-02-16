@@ -102,7 +102,7 @@
 		template += '<h4 class="results">@correct out of @total-questions!</h4>';
 		template += '<form id="js-quizzapp-restart"><label for="quizapp-start"></label>'; 
 		template += '<input type="hidden" name="restart-quiz" id="restart-quiz">';
-		template += '<button type="submit">Restart Quiz</button></form>';
+		template += '<button type="submit">Choose Your Quiz</button></form>';
 		template = template.replace('@correct', state.scores.right.length)
 					.replace('@total-questions', state.questions.length);
 
@@ -175,15 +175,43 @@
 
 	}
 
+	// choose which quiz to take
+	function chooseQuizType(){
+
+		var startTemplate = `<h1>Choose Your Quiz</h1>
+		<div class="safety-intro"><p class="intro-text">You can choose either 
+		a firearms safety quiz or a 60's TV trivia quiz.  (Double-click your selection please)</p><form id="choose-quiz">
+		<label></label>
+		<input type="hidden" class="choose-firearmsafety" name="choose-firearmsafety" id="choose-firearmsafety">
+		<button class="choose-firearmsafety" type="submit">Firearms Safety</button>
+		<label></label>
+		<input type="hidden" class="choose-tvTrivia" name="choose-tvTrivia" id="choose-tvTrivia">
+		<button class="choose-tvTrivia" type="submit">60's TV Trivia</button>
+		</form></div>
+		`;
+
+		$('.quiz-container').html(startTemplate);
+
+		$('#choose-quiz').submit( function(ev) {
+			ev.preventDefault();
+
+			$('.choose-firearmsafety').click( function() { renderIntro(firearmSafetyQuiz);	})
+
+			$('.choose-tvTrivia').click( function() { renderIntro(tvTriviaQuiz);  });			
+
+		})
+	}
 
 
 	// ##############  Event Listeners  #####################################
 	// ######################################################################
 
 	// Do this when we load the page
-	// options can be either firearmsSafetyQuiz or tvTriviaQuiz
 
-	renderIntro(firearmSafetyQuiz);
+
+	// options can be either firearmsSafetyQuiz or tvTriviaQuiz
+	chooseQuizType();
+
 })()
 
 
