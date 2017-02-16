@@ -16,7 +16,7 @@
 	}  // end of state object
 
 	var tvTriviaQuiz = {
-		url: "tvTrivia.txt"  // the file should be in the current directory
+		url: "tvTrivia.json"  // the file should be in the current directory
 	}
 
 	var firearmSafetyQuiz = {
@@ -33,13 +33,19 @@
 	   	}
 	   	$.ajax(settings)
 	   	.done( function(data){
-	   		state.questions = data;
-	   		//console.log('object: '+data);
-	   		console.log('state.questions: '+state.questions.length);
-	   		callback
+
+	   		console.log('in .done...')
+	   		console.log('object: '+data);
+	   		state.questions = JSON.parse(data);	   		
+	   		//console.log('state.questions: '+state.questions);
+	   		//callback
 	   	})
-	   	.fail( function() {
+	   	.fail( function(data) {
 	   		console.log('Fail!');
+	   		//console.log(data.responseText);
+	   		state.questions = JSON.parse(data.responseText);
+	   		console.log(state.questions);
+	   		//console.log(data.responseText.length);
 	   	});
 	};
 
