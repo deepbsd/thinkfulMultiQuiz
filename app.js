@@ -16,51 +16,34 @@
 	}  // end of state object
 
 	var tvTriviaQuiz = {
-		url: "tvTrivia.json"  // the file should be in the current directory
+		url: "tvTrivia.json", // the file should be in the current directory
+		template: "<h1>Baby Boomer TV Quiz App</h1><div class='safety-intro'><p class='intro-text'>Those of us who grew up during the 1950's and 60's experienced the early days of television. In a way, these were the \"golden days\" of television. No matter when you were born, chances are you've grown to love at least some of these characters. Test your recollection of these fun old shows!</p><form id='js-quizzapp-start-form'><label for='quizapp-start'>Start Your Boomer TV Trivia Quiz?</label><input type='hidden' name='start-quiz' id='start-quiz'><button type='submit'>Start Quiz </button></form></div> <!-- end of safety-intro  -->"
 	}
 
 	var firearmSafetyQuiz = {
-		url: "firearmsQuestions.txt"   // file should be in the current directory
+		url: "firearmsQuestions.json",   // file should be in the current directory
+		template: "<h1>Firearms Safety Quiz App</h1><div class='safety-intro'><p class='intro-text'>Firearms safety is a hot topic these days.  And if you live with firearms, it's vital to be safe!  Test your knowledge with these 10 questions and see if you're safe or whether you've been corrupted by watching too many movies and TV shows!</p><form id='js-quizzapp-start-form'><label for='quizapp-start'>Start Your Safety Quiz?</label><input type='hidden' name='start-quiz' id='start-quiz'><button type='submit'>Start Quiz</button></form></div> <!-- end of safety-intro  -->"
 	}
 
+
 	// this function gets called by renderIntro() in the 'startQuiz' event listener
-	function getQuestionsData(choice, callback) {
-		var settings = {
+	function getQuestionsData(choice) {
+
+	   	return $.ajax({
 		    type: "GET",
 		    url: choice.url,
 		    async: true,
 		    dataType: 'json'
-	   	}
-	   	$.ajax(settings)
-	   	.done( function(data){
-
-	   		console.log('in .done...')
-	   		console.log('object: '+data);
-	   		state.questions = JSON.parse(data);	   		
-	   		//console.log('state.questions: '+state.questions);
-	   		//callback
 	   	})
-	   	.fail( function(data) {
-	   		console.log('Fail!');
-	   		//console.log(data.responseText);
-	   		state.questions = JSON.parse(data.responseText);
-	   		console.log(state.questions);
-	   		//console.log(data.responseText.length);
-	   	});
+		   	.then(function (data) {
+		   		console.log('in .done...')
+		   		state.questions = data.questions;
+		   	})
+		   	.fail( function(data) {
+		   		console.log('Fail!');
+		   		console.log(data.responseText);
+		   	});
 	};
-
-	// This is the callback for getQuestionsData() invoked from renderIntro()
-	function insertQuizData(questionData) {
-		console.log('hitting insertQuizData...')
-		try {
-			state.questions = questionData;	
-		}
-		catch (e) {
-			console.log('error: '+e);
-		}
-	};
-
-
 
 
 
@@ -69,6 +52,7 @@
 
 
 	function proceedQuiz() {
+		console.log('proceedQuiz executing')
 
 		if (state.currentPage === 'question' && state.currentQuestion < state.questions.length) {
 			console.log('proceed reached, currentPage: ', state.currentPage);
@@ -97,32 +81,18 @@
 	}
 
 
-	function renderIntro() {
-		var template = `<h1>Baby Boomer TV Quiz App</h1>
-		<div class="safety-intro">
-	    <p class="intro-text">Those of us who grew up during the 1950's and 60's experienced the early days of television. In a way, these were the "golden days" of television. No matter when you were born, chances are you've grown to love at least some of these characters. Test your recollection of these fun old shows!</p>
-	    <form id="js-quizzapp-start-form">
-	      <label for="quizapp-start">Start Your Boomer TV Trivia Quiz?</label>
-	      <input type="hidden" name="start-quiz" id="start-quiz">
-	      <button type="submit">Load and Start Quiz</button>
-	    </form>
-	    </div> <!-- end of safety-intro  -->
-		`;
-		//console.log(template);
-		$(".quiz-container").html(template);
+	function renderIntro(choice) {
 
-
+		$(".quiz-container").html(choice.template);
 
 		$('#js-quizzapp-start-form').submit( function(ev) {
 			ev.preventDefault();
 			console.log('start pressed');
 			state.currentPage = 'question';
-			getQuestionsData(tvTriviaQuiz, proceedQuiz);
 
-
-
-			//console.log('object: '+state.questions);			
-			//proceedQuiz();
+			getQuestionsData(choice)
+			  .then(proceedQuiz)
+			  //.catch(renderError)
 		});
 	}
 
@@ -211,8 +181,9 @@
 	// ######################################################################
 
 	// Do this when we load the page
+	// options can be either firearmsSafetyQuiz or tvTriviaQuiz
 
-	renderIntro();
+	renderIntro(firearmSafetyQuiz);
 })()
 
 
