@@ -180,7 +180,7 @@
 
 		var startTemplate = `<h1>Choose Your Quiz</h1>
 		<div class="safety-intro"><p class="intro-text">You can choose either 
-		a firearms safety quiz or a 60's TV trivia quiz.  (Double-click your selection please)</p><form id="choose-quiz">
+		a firearms safety quiz or a 60's TV trivia quiz.  (Double-click your selection please)</p><form method="post" id="choose-quiz">
 		<label></label>
 		<input type="hidden" class="choose-firearmsafety" name="choose-firearmsafety" id="choose-firearmsafety">
 		<button class="choose-firearmsafety" type="submit">Firearms Safety</button>
@@ -192,14 +192,12 @@
 
 		$('.quiz-container').html(startTemplate);
 
-		$('#choose-quiz').submit( function(ev) {
-			ev.preventDefault();
 
-			$('.choose-firearmsafety').click( function() { renderIntro(firearmSafetyQuiz);	})
+		$('.choose-firearmsafety').click( function(ev) { ev.preventDefault(); renderIntro(firearmSafetyQuiz);	});
 
-			$('.choose-tvTrivia').click( function() { renderIntro(tvTriviaQuiz);  });			
+		$('.choose-tvTrivia').click( function(ev) { ev.preventDefault(); renderIntro(tvTriviaQuiz);  });			
 
-		})
+
 	}
 
 
